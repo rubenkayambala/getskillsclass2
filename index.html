@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons-1.10.5/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="asset/style.css">
+    <title>Get Skills CLass | Vitrine</title>
+</head>
+<div class="process">
+    <a href="#" class="icon-close" aria-label="icone close"><i class="bi bi-x"></i></a>
+    <div class="content">
+        <h2>Comment procéder</h2>
+        <p>Voulez-vous suivre une formation</p>
+        <a href="#" class="btnLoginPopup">S'inscrire</a>
+        <hr>
+        <p>Etes-vous déjà étudiant de la GET SKILLS CLASS ?</p>
+        <a href="UserInterface/carteApprenant.html">Obtenir sa carte d'apprenant</a>
+        <hr>
+        <p>Avez-vous suivi nos formations</p>
+        <a href="UserInterface/certificat/certif.html">Souscrire pour avoir le certificat</a>
+    </div>
+</div>
+
+<div class="wrapper">
+    <div class="form-box" id="myForm">
+        <h2>inscrivez-vous</h2>
+        <p style="text-align: center; color: #000;">Suivez ces étapes pour rejoindre la GET SKILLS CLASS</p>
+        <form action="#">
+            <div class="input-box"> 
+                <input type="text" name="name" id="name" autocomplete="name" required placeholder="Votre nom">
+                <label for="name">Nom</label>
+            </div>
+            <div class="input-box"> 
+                <input type="text" name="midname" id="midname" autocomplete="midname" required placeholder="Votre post-nom">
+                <label for="midname">Post-nom</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="first" id="first" autocomplete="first" required placeholder="Votre prénom">
+                <label for="first">Prénom</label>
+            </div>
+            <div class="input-box"> 
+                <input type="date" name="birth" id="birth" autocomplete="birth" required placeholder="Votre date de naissance">
+                <label for="birth">Date de naissance</label>
+            </div>
+            <div class="input-box"> 
+                <input type="text" name="adresse" id="adresse" autocomplete="adresse" required placeholder="Votre résidence">
+                <label for="adresse">Adresse actuelle</label> 
+            </div>
+            <div class="input-box">
+                <input type="text" name="user" id="user" autocomplete="user" required placeholder="Votre nom d'utilisateur">
+                <label for="user">Nom d'utilisateur</label>
+            </div>
+            <div class="input-box">
+                <input type="email" name="email" id="email" autocomplete="email" required placeholder="Votre adresse mail">
+                <label for="email">Adresse Email</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="num" id="num" autocomplete="num" required placeholder="Votre numéro de téléphone">
+                <label for="num">Téléphone</label>
+            </div>
+            <button type="submit" class="btn btnLogin-popup">S'inscrire</button>
+        </form>
+    </div>
+</div>
+
+<div class="connexion">
+    <div class="content">
+        <h2>Connectez vous</h2>
+        <form action="">
+            <input type="text" name="username" id="username" placeholder="Votre nom d'utilisateur">
+            <input type="password" name="password" id="password" placeholder="Votre mot de passe">
+            <button type="submit">Connexion</button>
+        </form>
+    </div>
+</div>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <div class="links">
+                <ul>
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="text">
+                <p class="icon"><i class="bi bi-house-fill"></i></p>
+                <p>Kinshasa, institut réligion, Unikin</p>
+            </div>
+            <div class="text">
+                <p class="icon"><i class="bi bi-envelope-fill"></i></p>
+                <p>getskillsclass@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="burger-menu" id="burger-menu">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <a href="index.html"><img src="asset/images/Convertis/logo_get_skills_class.png" alt=""></a>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#about">A propos</a></li>
+                    <li><a href="#formations">Formations</a></li>
+                    <li><a href="#souvenirs">Souvenir</a></li>
+                    <li><a href="#message">Contact</a></li>
+                </ul>
+                <a href="#" class="btn" id="connection" style="font-size: 30px; padding: 5px 10px; background: none; color: #000;"><i class="bi bi-person-circle"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="custom-alert" id="customAlert">
+        <h2>Notification</h2>
+        <hr>
+        <p id="alertMessage"></p>
+        <button onclick="closeAlert()">OK</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="dialogue" id="dialogue">
+        <h2>Notification</h2>
+        <hr>
+        <p>
+            Assurez vous d'être inscrit(e) pour pouvoir suivre ce cours.
+            Cliquez sur <span>Rejoindre</span> pour vous inscrire.
+            Cliquez sur OK pour quitter
+        </p>
+        <button onclick="fermerBoiteDeDialogue()">OK</button>
+    </div>
+
+    <section class="accueil" style="height: 87vh;">
+        <div class="container">
+            <h1>GET SKILLS <span style="color: #ff0000;">CLASS</span></h1>
+            <p style="color: #fff;">
+                EXPLORER LES TECHNOLOGIE DE L'INFORMATION ET DE LA COMMUNICATION 
+            </p>
+            <button class="btnJoin">Rejoindre</button>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <h3>
+                About us
+                <div></div>
+            </h3>
+            <div class="row px-2">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <img src="asset/images/Convertis/logo_get_skills_class.png" alt="">
+                </div>
+                <div class="col-lg-6 infos">
+                    <h5>GET SKILLS CLASS</h5>
+                    <p>
+                        Lancée pour répondre aux besoins croissants du secteur éducatif,
+	                    GET SKILLS Class se distingue par son approche intégrée, combinant 
+                        théorie et pratique pour préparer les apprenants aux défis de leurs 
+                        secteurs respectifs.
+                    </p>
+                    <a href="About/about.html" class="btn">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formations" id="formations">
+        <div class="container" style="padding: 20px 0;">
+            <h3 style="text-align: center;">
+                Nos formations
+                <div></div>
+            </h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-laptop"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Informatique Générale</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-code-slash"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Programmation</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-server"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Base de données</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-router"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Réseaux</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-terminal"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Système & administration</h6>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-keyboard"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Bureautique</h6> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-terminal"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Système & administration</h6> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 p-1 mb-2 shadow">
+                    <div class="row align-items-center m-1 bg-light">
+                        <div class="col-lg-auto text-center">
+                            <p class="icon" style="color: #8b0000;"><i class="bi bi-keyboard"></i></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h6 style="text-align: center;">Bureautique</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="banner">
+        <div class="container">
+            <div class="content">
+                <h3>+400</h3>
+                <p>Etudiants depuis nos debut en 2000</p>
+            </div>
+            <div>
+                <span></span>
+            </div>
+            <div class="content">
+                <h3>+40</h3>
+                <p>Formateurs dans nos centres</p>
+            </div>
+            <div>
+                <span></span>
+            </div>
+            <div class="content">
+                <h3>+50</h3>
+                <p>Programmes de formation en matière d'Informatique, marketing, autre</p>
+            </div>
+            <div>
+                <span></span>
+            </div>
+            <div class="content">
+                <h3>95%</h3>
+                <p>Etudiants qui ont obtenu un emploi ou une oppotunité</p>
+            </div>
+        </div>
+    </div>
+
+    <section class="programme">
+        <div class="container">
+            <h3>
+                Avoir un aperçu sur nos cours
+                <div></div>
+            </h3>
+            <div class="row">
+                <div class="col-lg-6 mb-3 p-2">
+                    <div class="bg-light shadow p-2">
+                        <img src="asset/images/Convertis/Rep.jpg" alt="" width="100%" height="60%">
+                        <div class="d-flex justify-content-end" style="margin-top: -10px;">
+                            <p class="bg-danger p-2 pb-0 mr-2">Niveau 1</p>
+                        </div>
+                        <h6 style="margin-top: 25px;">Metier des techniques de l'information et de la communication </h6>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Soluta quam doloribus
+                            porro, suscipit reprehenderit vitae
+                            magnam eligendi rerum.
+                        </p>
+                        <a href="#" style="padding: 5px 15px; background-color: #ff0000; color: #fff;" class="btn" onclick="afficherBoiteDeDialogue()">Suivre</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3 shadow p-2">
+                    <div class="bg-light shadow p-2">
+                        <img src="asset/images/Convertis/Gik.jpg" alt="" width="100%" height="60%">
+                        <div class="niv" style="margin-left: 41.5em;">
+                            <p>Niveau 2</p>
+                        </div>
+                        <h6 style="margin-top: 25px;">Programmation, Réseaux & Base de données</h6>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Soluta quam doloribus
+                            porro, suscipit reprehenderit vitae
+                            magnam eligendi rerum.
+                        </p>
+                        <a href="#" style="padding: 5px 15px; background-color: #ff0000; color: #fff;" class="btn" onclick="afficherBoiteDeDialogue()">Suivre</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="souvenirs" id="souvenirs">
+        <div class="container" style="padding: 5px 0;">
+            <h3 style="text-align: center; margin-top: 10px; color: #fff;">
+                Nos souvenirs
+                <div></div>
+            </h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="shadow" style="padding: 20px; border-radius: 15px; margin-bottom: 10px; background-color: #fff;">
+                        <div style="position: relative;">
+                            <video src="asset/images/presentP2.mp4" id="MaMusique2" style="width: 100%; height: 65%; object-fit: cover; border-radius: 10px;"></video>
+                            <img src="asset/images/bouton-jouer.png" id="btnplay2" style="width: 50px; top: 35%; left: 40%; position: absolute">
+                        </div>
+                        <h6 style="color: #000; margin-bottom: 0;">Première promotion</h6>
+                        <p style="color: #000; font-size: 15px; margin-bottom: 0;">
+                            Les souvenirs de notre première promotion
+                        </p>
+                        <a style="background-color: #ff0000; color: #fff; font-size: 12px;" href="Albums/promotion1.html" class="btn">Voir l'album</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="shadow" style="padding: 20px; border-radius: 15px; margin-bottom: 10px; background-color: #fff;">
+                        <div style="position: relative;">
+                            <video src="asset/images/presentP2.mp4" id="MaMusique2" style="width: 100%; height: 65%; object-fit: cover; border-radius: 10px;"></video>
+                            <img src="asset/images/bouton-jouer.png" id="btnplay2" style="width: 50px; top: 35%; left: 40%; position: absolute">
+                        </div>
+                        <h6 style="color: #000; margin-bottom: 0;">Deuxième promotion</h6>
+                        <p style="color: #000; font-size: 15px; margin-bottom: 0;">
+                            Les souvenirs de notre deuxième promotion
+                        </p>
+                        <a style="background-color: #ff0000; color: #fff; font-size: 12px;" href="Albums/promotion2.html" class="btn">Voir l'album</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="shadow" style="padding: 20px; border-radius: 15px; margin-bottom: 10px; background-color: #fff;">
+                        <div style="position: relative;">
+                            <video src="asset/images/presentP2.mp4" id="MaMusique2" style="width: 100%; height: 65%; object-fit: cover; border-radius: 10px;"></video>
+                            <img src="asset/images/bouton-jouer.png" id="btnplay2" style="width: 50px; top: 35%; left: 40%; position: absolute">
+                        </div>
+                        <h6 style="color: #000; margin-bottom: 0;">Troisème promotion</h6>
+                        <p style="color: #000; font-size: 15px; margin-bottom: 0;">
+                            Les souvenirs de notre troisième promotion
+                        </p>
+                        <a style="background-color: #ff0000; color: #fff; font-size: 12px;" href="Albums/promotion3.html" class="btn">Voir l'album</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="shadow" style="padding: 20px; border-radius: 15px; margin-bottom: 10px; background-color: #fff;">
+                        <div style="position: relative;">
+                            <video src="asset/images/presentP2.mp4" id="MaMusique2" style="width: 100%; height: 65%; object-fit: cover; border-radius: 10px;"></video>
+                            <img src="asset/images/bouton-jouer.png" id="btnplay2" style="width: 50px; top: 35%; left: 40%; position: absolute">
+                        </div>
+                        <h6 style="color: #000; margin-bottom: 0;">Quatrième promotion</h6>
+                        <p style="color: #000; font-size: 15px; margin-bottom: 0;">
+                            Les souvenirs de notre quatrième promotion
+                        </p>
+                        <a style="background-color: #ff0000; color: #fff; font-size: 12px;" href="Albums/promotion4.html" class="btn">Voir l'album</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="message" id="message">
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <div class="form-box">
+                    <h2>Envoyer un message</h2>
+                    <p>Suivez ces étapes pour nous envoyer un message</p>
+                    <form action="#">
+                        <div class="input-box"> 
+                            <input type="text" name="name1" id="name1" autocomplete="name1" required>
+                            <label for="name1">Nom</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" name="first1" id="first1" autocomplete="first1" required>
+                            <label for="first1">Prénom</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" name="email1" id="email1" autocomplete="email1" required>
+                            <label for="email1">Adresse Email</label>
+                        </div>
+                        <div class="input-box">
+                            <textarea name="message" id="message" autocomplete="email" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn">Envoyer un message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="final">
+                <ul>
+                        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                        <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+                </ul>
+                <hr style="height: 1px; color: #fff; width: 100%;">
+                <p>&copy; 2024 GET SKILLS CLASS, Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button onclick="topFunction()" id="myBtn" class="btn btn-primary">&uparrow;</button>
+
+    <script>
+        let mybutton = document.getElementById("myBtn");
+
+        //Afficher le bouton retour en haut
+        window.onscroll = function(){scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // Menu burger
+        document.getElementById('burger-menu').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+
+        // Lorsque l'utilisateur clique sur le bouton, retour en haut
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+
+        // Ouvrir et fermer le formulaire d'inscription
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.wrapper');
+            const process = document.querySelector('.process');
+            const btnJoin = document.querySelector('.btnJoin');
+            const btnPopup = document.querySelector('.btnLoginPopup');
+            const iconClose = document.querySelector('.icon-close');
+
+            btnJoin.addEventListener('click', () => {
+                process.classList.add('active-process');
+            });
+
+            btnPopup.addEventListener('click', () => {
+                wrapper.classList.add('active-popup');
+                process.classList.remove('active-process')
+            });
+
+            iconClose.addEventListener('click', () => {
+                wrapper.classList.remove('active-popup');
+            });
+        });
+
+        // Ouvrir et fermer le formulaire de connexion
+        document.addEventListener('DOMContentLoaded', () => {
+            const connect = document.querySelector('.connexion');
+            const btnconnect = document.getElementById('connection');
+
+            btnconnect.addEventListener('click', () => {
+            connect.classList.toggle('active-connect');
+            });
+        });
+
+        // Vérification du remplissage des champs et affichage de la boîte de dialogue
+        let formToSubmit = null;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Empêche l'envoi du formulaire
+
+                let form = event.target;
+                let allFilled = true;
+                let fields = form.querySelectorAll('input[type="text"], input[type="email"], input[type="date"]');
+
+                fields.forEach(function(field) {
+                    if (!field.value) {
+                        allFilled = false;
+                        field.style.borderColor = 'red'; // Met en évidence les champs non remplis
+                    } else {
+                        field.style.borderColor = ''; // Réinitialise la bordure si le champ est rempli
+                    }
+                });
+
+                if (allFilled) {
+                    formToSubmit = form;
+                    showAlert('Bravo ! Nous vous remercions pour votre inscription. \n Nous avons envoyé un message de confirmation dans votre mail. \n Cliquez sur OK pour quitter');
+                } else {
+                    showAlert('Veuillez remplir tous les champs.');
+                }
+            });
+        });
+
+        function showAlert(message) {
+            document.getElementById('alertMessage').innerText = message;
+            document.getElementById('customAlert').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function closeAlert() {
+            document.getElementById('customAlert').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+            if (formToSubmit) {
+                formToSubmit.submit(); // Soumet le formulaire après la fermeture de l'alerte
+                formToSubmit = null;
+            }
+        }
+
+        // Message pour les utilisateurs non inscrits
+        function afficherBoiteDeDialogue() {
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('dialogue').style.display = 'block';
+        }
+
+        function fermerBoiteDeDialogue() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('dialogue').style.display = 'none';
+        }
+
+        //Les vidéos
+        var MaMusique1 = document.getElementById("MaMusique1") 
+        var MaMusique2 = document.getElementById("MaMusique2")
+        var MaMusique3 = document.getElementById("MaMusique3")
+        var MaMusique4 = document.getElementById("MaMusique4")
+        var btnplay1 = document.getElementById("btnplay1")
+        var btnplay2 = document.getElementById("btnplay2")
+        var btnplay3 = document.getElementById("btnplay3")
+        var btnplay4 = document.getElementById("btnplay4")
+
+        btnplay1.onclick = function(){
+            if(MaMusique1.paused){
+                    MaMusique1.play();
+                    btnplay1.src = "asset/images/bouton-pause.png"
+            } else{
+                    MaMusique1.pause();
+                    btnplay1.src = "asset/images/bouton-jouer.png"
+            }
+        }
+        btnplay2.onclick = function(){
+            if(MaMusique2.paused){
+                    MaMusique2.play();
+                    btnplay2.src = "asset/images/bouton-pause.png"
+            } else{
+                    MaMusique2.pause();
+                    btnplay2.src = "asset/images/bouton-jouer.png"
+            }
+        }
+        btnplay3.onclick = function(){
+            if(MaMusique3.paused){
+                    MaMusique3.play();
+                    btnplay3.src = "asset/images/bouton-pause.png"
+            } else{
+                    MaMusique3.pause();
+                    btnplay3.src = "asset/images/bouton-jouer.png"
+            }
+        }
+        btnplay4.onclick = function(){
+            if(MaMusique4.paused){
+                    MaMusique4.play();
+                    btnplay4.src = "asset/images/bouton-pause.png"
+            } else{
+                    MaMusique4.pause();
+                    btnplay4.src = "asset/images/bouton-jouer.png"
+            }
+        }
+    </script>
+
+</body>
+</html>
